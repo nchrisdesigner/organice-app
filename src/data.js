@@ -1,8 +1,6 @@
-import { formatDate } from "./utils/utils";
+import { formatDate } from "./utils/utils"
 
-formatDate
-
-const now = Date.now();
+const now = Date.now()
 
 const tasks = [
 	{

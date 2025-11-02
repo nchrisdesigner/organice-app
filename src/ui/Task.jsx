@@ -2,6 +2,7 @@ import { FaRegCheckCircle } from "react-icons/fa"
 import { FaRegClock } from "react-icons/fa"
 import { MdDelete } from "react-icons/md"
 import { FiEdit2 } from "react-icons/fi";
+import Priority from "./Priority";
 
 
 const Task = ({id, title, description, completed, createdAt,priority, dueDate,tags}) => {
@@ -14,7 +15,7 @@ const Task = ({id, title, description, completed, createdAt,priority, dueDate,ta
         completed ? <FaRegCheckCircle className="text-emerald-500" /> : <FaRegClock className="text-slate-400" />
       }
           <h2 className="text-lg font-semibold">{title}</h2>
-          <span className="text-xs rounded-full bg-emerald-200 px-3 py-1 ">{priority}</span>
+          <Priority value={priority} />
         </div>
         <p className="text-sm">{description}</p>
         <span className="text-xs bg-slate-200 text-slate-500 px-2 py-1 font-medium rounded">{createdAt}</span>
