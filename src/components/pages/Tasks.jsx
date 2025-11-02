@@ -23,7 +23,11 @@ const Tasks = () => {
   function handleAddTask(){
     setTasksArr(prev => [...prev, newTask])
     console.log(tasksArr);
-    
+  }
+
+  function handleDeleteTask(id){
+    const newTasks = tasksArr.filter((task) => task.id !== id )
+    setTasksArr(newTasks)
   }
 
 
@@ -41,7 +45,7 @@ const Tasks = () => {
         <ul className="flex flex-col gap-2">
           {tasksArr.map((task) => {
             return(
-              <Task key={task.id} {...task} />
+              <Task key={task.id} {...task} onDeleteTask={handleDeleteTask} />
             )
           })}
         </ul>

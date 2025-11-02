@@ -1,11 +1,12 @@
 import { FaRegCheckCircle } from "react-icons/fa"
 import { FaRegClock } from "react-icons/fa"
 import { MdDelete } from "react-icons/md"
-import { FiEdit2 } from "react-icons/fi";
-import Priority from "./Priority";
+import { FiEdit2 } from "react-icons/fi"
+import Priority from "./Priority"
+
+const Task = ({id, title, description, completed, createdAt,priority, dueDate,tags, onDeleteTask}) => {
 
 
-const Task = ({id, title, description, completed, createdAt,priority, dueDate,tags}) => {
   return (
     <li className="flex justify-between max-w-[600px] border border-slate-200 p-4 shadow-md rounded bg-white">
       
@@ -22,7 +23,7 @@ const Task = ({id, title, description, completed, createdAt,priority, dueDate,ta
       </div>
       <div className="flex gap-2">
         <FiEdit2 className="bg-sky-100 text-sky-400 flex items-center justify-center p-1 h-6 w-6 rounded cursor-pointer" />
-        <MdDelete className="bg-red-100 text-red-400 flex items-center justify-center p-[3px] h-6 w-6 rounded cursor-pointer" />
+        <MdDelete onClick={() => onDeleteTask(id)} className="bg-red-100 text-red-400 flex items-center justify-center p-[3px] h-6 w-6 rounded cursor-pointer" />
       </div>
     </li>
   )
