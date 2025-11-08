@@ -4,7 +4,7 @@ import { Outlet } from 'react-router'
 
 const Layout = () => {
   return (
-    <section className='grid grid-cols-[25fr_75fr] h-screen bg-slate-50'>
+    <section className='grid grid-cols-[25fr_75fr] h-screen bg-slate-100'>
       <Sidebar />
       <main className='p-4'>
         <Outlet />
