@@ -6,6 +6,8 @@ import Tasks from './components/pages/Tasks'
 import Notes from './components/pages/nOTES.JSX'
 import Budget from './components/pages/Budget'
 import NotFound from './components/pages/NotFound'
+import { BudgetProvider } from './context/BudgetContext'
+
 
 const router = createBrowserRouter([
   {
@@ -26,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path: "budget",
-        element: <Budget />
+        element: <BudgetProvider><Budget /></BudgetProvider>
       },
       {
         path:"*",
